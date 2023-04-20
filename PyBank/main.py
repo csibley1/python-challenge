@@ -14,6 +14,7 @@ line = "-" * 28
 
 # Open the csv file
 csv_file = os.path.join("C:\\","Users","steam","Desktop","Starter_Code - Challenge3","PyBank","Resources","budget_data.csv")
+txt_file = os.path.join("C:\\","Users","steam","Desktop","Starter_Code - Challenge3","PyBank","analysis","report.txt")
 with open(csv_file,'r',encoding='utf') as csvee:
     bux = csv.DictReader(csvee)
     for row in bux:
