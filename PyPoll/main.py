@@ -6,10 +6,6 @@ votes = {}
 report = []
 candidates = defaultdict()
 ctr = defaultdict()
-TotalChange = 0
-AvgChange = 0
-Mo1 = 0
-Mo2 = 0
 ReportHead = "Election Results"
 line = "-" * 28
 
