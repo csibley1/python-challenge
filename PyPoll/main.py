@@ -5,7 +5,6 @@ from collections import defaultdict
 votes = {}
 report = []
 candidates = defaultdict()
-ctr = defaultdict()
 ReportHead = "Election Results"
 line = "-" * 28
 
