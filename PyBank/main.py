@@ -3,6 +3,7 @@ locale.setlocale(locale.LC_ALL,'')
 
 # Variables
 change = []
+report = []
 ctr = 0
 TotalBux = 0
 TotalChange = 0
@@ -37,7 +38,7 @@ TotalMonths = ctr
 for chg in change:
     TotalChange += chg
 AvgChange = round(TotalChange / len(change),2)
-# Show report
+# Output report to console
 print(ReportHead)
 print(line)
 print(f"Total Months: {TotalMonths}")
@@ -45,3 +46,15 @@ print(f"Total: {locale.currency(TotalBux)}")
 print(f"Average Change: {locale.currency(AvgChange)}")
 print(f"Greatest Increase in Profits: {max(change)}")
 print(f"Greatest Decrease in Profits: {min(change)}")
+
+# Store report in a variable, write variable to file
+report.append(f"\n{ReportHead}")
+report.append(f"\n{line}")
+report.append(f"\nTotal Months: {TotalMonths}")
+report.append(f"\nTotal: {locale.currency(TotalBux)}")
+report.append(f"\nAverage Change: {locale.currency(AvgChange)}")
+report.append(f"\nGreatest Increase in Profits: {max(change)}")
+report.append(f"\nGreatest Decrease in Profits: {min(change)}")
+txt = open(txt_file,'w')
+txt.writelines(report)
+txt.close()
